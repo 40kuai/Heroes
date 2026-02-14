@@ -27,3 +27,5 @@ class Character(Base):
 
     # 关系
     user = relationship("User", backref="characters")
+    skills = relationship("CharacterSkill", back_populates="character")
+    tasks = relationship("CharacterTask", back_populates="character")

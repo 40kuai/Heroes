@@ -9,6 +9,7 @@
           <router-link to="/character" class="navbar-item">角色管理</router-link>
           <router-link to="/level" class="navbar-item">等级管理</router-link>
           <router-link to="/equipment" class="navbar-item">装备管理</router-link>
+          <router-link to="/skill" class="navbar-item">技能管理</router-link>
           <router-link to="/ranking" class="navbar-item">排行榜</router-link>
           <router-link to="/task" class="navbar-item">任务</router-link>
           <router-link to="/battle" class="navbar-item">战斗</router-link>

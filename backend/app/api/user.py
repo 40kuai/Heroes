@@ -10,7 +10,7 @@ from app.auth.dependencies import get_current_user
 from app.models.user import User
 
 # 创建路由器
-router = APIRouter(prefix="/api/user", tags=["user"])
+router = APIRouter(prefix="/user", tags=["user"])
 
 # 请求和响应模型
 class UserCreate(BaseModel):
@@ -72,7 +72,12 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(db_user)
     
-    return db_user
+    # 返回字典格式的数据
+    return {
+        "id": db_user.id,
+        "username": db_user.username,
+        "email": db_user.email
+    }
 
 # 用户登录
 @router.post("/login", response_model=Token)

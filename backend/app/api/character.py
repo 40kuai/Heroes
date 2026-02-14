@@ -8,7 +8,7 @@ from app.models.user import User
 from app.models.character import Character
 
 # 创建路由器
-router = APIRouter(prefix="/api/character", tags=["character"])
+router = APIRouter(prefix="/character", tags=["character"])
 
 # 请求和响应模型
 class CharacterCreate(BaseModel):
@@ -94,14 +94,49 @@ def create_character(character: CharacterCreate, current_user: User = Depends(ge
     db.commit()
     db.refresh(db_character)
     
-    return db_character
+    # 返回字典格式的数据
+    return {
+        "id": db_character.id,
+        "name": db_character.name,
+        "user_id": db_character.user_id,
+        "level": db_character.level,
+        "exp": db_character.exp,
+        "class_type": db_character.class_type,
+        "strength": db_character.strength,
+        "agility": db_character.agility,
+        "intelligence": db_character.intelligence,
+        "vitality": db_character.vitality,
+        "hp": db_character.hp,
+        "mp": db_character.mp,
+        "attack": db_character.attack,
+        "defense": db_character.defense
+    }
 
 # 获取用户的所有角色
 @router.get("/", response_model=List[CharacterResponse])
 def get_characters(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     """获取当前用户的所有角色"""
     characters = db.query(Character).filter(Character.user_id == current_user.id).all()
-    return characters
+    # 返回字典格式的数据列表
+    return [
+        {
+            "id": character.id,
+            "name": character.name,
+            "user_id": character.user_id,
+            "level": character.level,
+            "exp": character.exp,
+            "class_type": character.class_type,
+            "strength": character.strength,
+            "agility": character.agility,
+            "intelligence": character.intelligence,
+            "vitality": character.vitality,
+            "hp": character.hp,
+            "mp": character.mp,
+            "attack": character.attack,
+            "defense": character.defense
+        }
+        for character in characters
+    ]
 
 # 获取单个角色信息
 @router.get("/{character_id}", response_model=CharacterResponse)

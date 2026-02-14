@@ -1,5 +1,5 @@
 from app.database import engine, Base
-from app.models import user, character  # 导入所有模型，确保它们被注册
+from app.models import user, character, skill, equipment, task  # 导入所有模型，确保它们被注册
 
 # 创建所有表
 def init_db():
