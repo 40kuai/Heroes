@@ -1,0 +1,773 @@
+{
+  "project_name": "角色扮演游戏",
+  "development_status": {
+    "overall_progress": {
+      "total_tasks": 50,
+      "completed_tasks": 24,
+      "in_progress_tasks": 0,
+      "pending_tasks": 26,
+      "completion_percentage": 48,
+      "last_updated": "2026-02-14",
+      "start_date": "2026-02-14",
+      "estimated_completion_date": "2026-02-20"
+    },
+    "milestones": [
+      {
+        "id": "milestone-1",
+        "name": "核心系统开发",
+        "description": "完成用户系统、角色系统、等级系统和属性系统",
+        "status": "completed",
+        "completion_date": "2026-02-14"
+      },
+      {
+        "id": "milestone-2",
+        "name": "装备和排行榜系统",
+        "description": "完成装备系统和排行榜系统",
+        "status": "completed",
+        "completion_date": "2026-02-14"
+      },
+      {
+        "id": "milestone-3",
+        "name": "技能和任务系统",
+        "description": "完成技能系统和任务系统",
+        "status": "pending",
+        "estimated_completion_date": "2026-02-17"
+      },
+      {
+        "id": "milestone-4",
+        "name": "社交和商城系统",
+        "description": "完成社交系统和商城系统",
+        "status": "pending",
+        "estimated_completion_date": "2026-02-20"
+      }
+    ]
+  },
+  "feature_development_list": [
+    {
+      "id": "user-info-management",
+      "name": "个人信息管理功能",
+      "description": "用户可以查看和修改个人信息",
+      "status": "completed",
+      "priority": "high",
+      "start_date": "2026-02-14",
+      "completion_date": "2026-02-14",
+      "subtasks": [
+        {
+          "id": "user-info-api",
+          "name": "后端API开发",
+          "description": "实现用户信息查询和更新API",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "user-info-frontend",
+          "name": "前端页面开发",
+          "description": "创建个人信息管理页面",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "user-info-test",
+          "name": "功能测试",
+          "description": "测试个人信息查看和修改功能",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "user-info-display",
+          "name": "个人信息显示测试",
+          "test_steps": [
+            "登录系统",
+            "点击'个人信息'链接，进入个人信息页面",
+            "查看个人信息是否正确显示"
+          ],
+          "expected_result": "个人信息正确显示"
+        },
+        {
+          "id": "user-info-update",
+          "name": "个人信息更新测试",
+          "test_steps": [
+            "登录系统",
+            "点击'个人信息'链接，进入个人信息页面",
+            "修改个人信息（如邮箱、密码）",
+            "点击'保存'按钮",
+            "验证个人信息是否修改成功"
+          ],
+          "expected_result": "个人信息可以正确修改"
+        }
+      ]
+    },
+    {
+      "id": "character-management",
+      "name": "角色管理系统",
+      "description": "用户可以创建、编辑和删除角色",
+      "status": "completed",
+      "priority": "high",
+      "start_date": "2026-02-14",
+      "completion_date": "2026-02-14",
+      "subtasks": [
+        {
+          "id": "character-api",
+          "name": "后端API开发",
+          "description": "实现角色创建、查询、更新和删除API",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "character-frontend",
+          "name": "前端页面开发",
+          "description": "创建角色管理页面",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "character-classes",
+          "name": "角色职业系统",
+          "description": "实现不同职业的初始属性设置",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "character-test",
+          "name": "功能测试",
+          "description": "测试角色创建、编辑和删除功能",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "character-create",
+          "name": "角色创建测试",
+          "test_steps": [
+            "登录系统",
+            "点击'角色管理'链接，进入角色管理页面",
+            "点击'创建角色'按钮",
+            "填写角色名称，选择角色职业",
+            "点击'保存'按钮",
+            "验证角色是否创建成功"
+          ],
+          "expected_result": "角色可以正确创建"
+        },
+        {
+          "id": "character-edit",
+          "name": "角色编辑测试",
+          "test_steps": [
+            "登录系统",
+            "点击'角色管理'链接，进入角色管理页面",
+            "点击'编辑'按钮，修改角色名称",
+            "验证角色名称是否修改成功"
+          ],
+          "expected_result": "角色可以正确编辑"
+        },
+        {
+          "id": "character-delete",
+          "name": "角色删除测试",
+          "test_steps": [
+            "登录系统",
+            "点击'角色管理'链接，进入角色管理页面",
+            "点击'删除'按钮，删除角色",
+            "验证角色是否删除成功"
+          ],
+          "expected_result": "角色可以正确删除"
+        }
+      ]
+    },
+    {
+      "id": "level-up-system",
+      "name": "等级提升系统",
+      "description": "角色可以通过获取经验值提升等级",
+      "status": "completed",
+      "priority": "high",
+      "start_date": "2026-02-14",
+      "completion_date": "2026-02-14",
+      "subtasks": [
+        {
+          "id": "level-api",
+          "name": "后端API开发",
+          "description": "实现经验值计算和等级提升API",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "level-frontend",
+          "name": "前端页面开发",
+          "description": "创建等级管理页面",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "level-calculation",
+          "name": "经验值计算系统",
+          "description": "实现经验值需求随等级指数增长的计算逻辑",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "level-test",
+          "name": "功能测试",
+          "description": "测试经验值获取和等级提升功能",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "level-exp-gain",
+          "name": "经验值获取测试",
+          "test_steps": [
+            "登录系统",
+            "点击'等级管理'链接，进入等级管理页面",
+            "选择一个角色",
+            "点击'获取500经验'或'获取1000经验'按钮",
+            "验证角色经验值是否增加"
+          ],
+          "expected_result": "角色可以正确获取经验值"
+        },
+        {
+          "id": "level-up",
+          "name": "等级提升测试",
+          "test_steps": [
+            "登录系统",
+            "点击'等级管理'链接，进入等级管理页面",
+            "选择一个角色",
+            "点击'获取经验值'按钮，使角色经验值足够升级",
+            "验证角色是否升级"
+          ],
+          "expected_result": "角色可以正确升级"
+        }
+      ]
+    },
+    {
+      "id": "attribute-growth",
+      "name": "属性成长系统",
+      "description": "角色等级提升时属性自动增长",
+      "status": "completed",
+      "priority": "high",
+      "start_date": "2026-02-14",
+      "completion_date": "2026-02-14",
+      "subtasks": [
+        {
+          "id": "attribute-model",
+          "name": "属性模型更新",
+          "description": "更新角色模型，添加基础属性和衍生属性",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "attribute-growth-logic",
+          "name": "属性成长逻辑",
+          "description": "实现属性自动增长和成长曲线",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "attribute-class-bonus",
+          "name": "职业属性加成",
+          "description": "实现不同职业类型的属性成长系数",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "attribute-test",
+          "name": "功能测试",
+          "description": "测试角色等级提升时属性是否自动增长",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "attribute-growth-on-level-up",
+          "name": "等级提升属性增长测试",
+          "test_steps": [
+            "登录系统",
+            "点击'角色管理'链接，进入角色管理页面",
+            "查看角色的属性信息",
+            "点击'等级管理'链接，进入等级管理页面",
+            "选择该角色，点击'获取经验值'按钮，使角色升级",
+            "返回'角色管理'页面，查看角色属性是否增加"
+          ],
+          "expected_result": "角色等级提升时属性自动增长"
+        },
+        {
+          "id": "attribute-class-bonus",
+          "name": "职业属性加成测试",
+          "test_steps": [
+            "登录系统",
+            "点击'角色管理'链接，进入角色管理页面",
+            "创建不同职业的角色（战士、法师、射手、刺客、牧师）",
+            "点击'等级管理'链接，进入等级管理页面",
+            "为每个角色获取经验值，使角色升级",
+            "返回'角色管理'页面，查看不同职业角色的属性增长是否符合预期"
+          ],
+          "expected_result": "不同职业角色的属性增长符合各自的成长系数"
+        }
+      ]
+    },
+    {
+      "id": "equipment-system",
+      "name": "装备系统",
+      "description": "用户可以创建、穿戴和卸下装备",
+      "status": "completed",
+      "priority": "high",
+      "start_date": "2026-02-14",
+      "completion_date": "2026-02-14",
+      "subtasks": [
+        {
+          "id": "equipment-model",
+          "name": "装备模型创建",
+          "description": "创建装备模型和装备槽位模型",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "equipment-api",
+          "name": "后端API开发",
+          "description": "实现装备创建、查询、穿戴和卸下API",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "equipment-frontend",
+          "name": "前端页面开发",
+          "description": "创建装备管理页面",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "equipment-level-limit",
+          "name": "装备等级限制",
+          "description": "实现装备等级不能超过角色等级的限制",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "equipment-test",
+          "name": "功能测试",
+          "description": "测试装备创建、穿戴和卸下功能",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "equipment-create",
+          "name": "装备创建测试",
+          "test_steps": [
+            "登录系统",
+            "点击'装备管理'链接，进入装备管理页面",
+            "点击'创建装备'按钮",
+            "填写装备名称、类型、等级、稀有度和属性加成",
+            "点击'保存'按钮",
+            "验证装备是否创建成功"
+          ],
+          "expected_result": "装备可以正确创建"
+        },
+        {
+          "id": "equipment-equip",
+          "name": "装备穿戴测试",
+          "test_steps": [
+            "登录系统",
+            "点击'装备管理'链接，进入装备管理页面",
+            "选择一个角色",
+            "选择一个装备，点击'选择'按钮",
+            "选择一个槽位，点击'穿戴装备'按钮",
+            "验证装备是否穿戴成功"
+          ],
+          "expected_result": "装备可以正确穿戴"
+        },
+        {
+          "id": "equipment-unequip",
+          "name": "装备卸下测试",
+          "test_steps": [
+            "登录系统",
+            "点击'装备管理'链接，进入装备管理页面",
+            "选择一个已穿戴装备的角色",
+            "点击'卸下'按钮，卸下装备",
+            "验证装备是否卸下成功"
+          ],
+          "expected_result": "装备可以正确卸下"
+        },
+        {
+          "id": "equipment-level-limit",
+          "name": "装备等级限制测试",
+          "test_steps": [
+            "登录系统",
+            "点击'装备管理'链接，进入装备管理页面",
+            "创建一个等级高于角色等级的装备",
+            "选择该角色，尝试穿戴该装备",
+            "验证是否出现装备等级不能超过角色等级的提示"
+          ],
+          "expected_result": "装备等级不能超过角色等级"
+        }
+      ]
+    },
+    {
+      "id": "ranking-system",
+      "name": "排行榜系统",
+      "description": "用户可以查看等级排行和战力排行",
+      "status": "completed",
+      "priority": "high",
+      "start_date": "2026-02-14",
+      "completion_date": "2026-02-14",
+      "subtasks": [
+        {
+          "id": "ranking-api",
+          "name": "后端API开发",
+          "description": "实现等级排行和战力排行API",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "ranking-frontend",
+          "name": "前端页面开发",
+          "description": "创建排行榜页面",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "ranking-power-calculation",
+          "name": "战力计算系统",
+          "description": "实现角色战力的计算逻辑",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        },
+        {
+          "id": "ranking-test",
+          "name": "功能测试",
+          "description": "测试排行榜是否正确显示等级排行和战力排行，以及个人排名",
+          "status": "completed",
+          "completion_date": "2026-02-14"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "ranking-level",
+          "name": "等级排行榜测试",
+          "test_steps": [
+            "登录系统",
+            "点击'排行榜'链接，进入排行榜页面",
+            "查看'等级排行榜'",
+            "验证排名是否正确（按等级排序，等级相同按战力排序）"
+          ],
+          "expected_result": "等级排行榜可以正确显示排名"
+        },
+        {
+          "id": "ranking-power",
+          "name": "战力排行榜测试",
+          "test_steps": [
+            "登录系统",
+            "点击'排行榜'链接，进入排行榜页面",
+            "点击'战力排行'标签",
+            "查看'战力排行榜'",
+            "验证排名是否正确（按战力排序）"
+          ],
+          "expected_result": "战力排行榜可以正确显示排名"
+        },
+        {
+          "id": "ranking-personal",
+          "name": "个人排名测试",
+          "test_steps": [
+            "登录系统",
+            "点击'排行榜'链接，进入排行榜页面",
+            "查看个人排名",
+            "验证个人排名是否正确"
+          ],
+          "expected_result": "个人排名可以正确显示"
+        }
+      ]
+    },
+    {
+      "id": "skill-system",
+      "name": "技能系统",
+      "description": "角色可以学习和升级技能",
+      "status": "pending",
+      "priority": "medium",
+      "start_date": null,
+      "completion_date": null,
+      "subtasks": [
+        {
+          "id": "skill-model",
+          "name": "技能模型创建",
+          "description": "创建技能模型和技能学习模型",
+          "status": "pending"
+        },
+        {
+          "id": "skill-api",
+          "name": "后端API开发",
+          "description": "实现技能学习和升级API",
+          "status": "pending"
+        },
+        {
+          "id": "skill-frontend",
+          "name": "前端页面开发",
+          "description": "创建技能管理页面",
+          "status": "pending"
+        },
+        {
+          "id": "skill-level-limit",
+          "name": "技能等级限制",
+          "description": "实现技能等级不能超过角色等级的限制",
+          "status": "pending"
+        },
+        {
+          "id": "skill-test",
+          "name": "功能测试",
+          "description": "测试技能学习和升级功能",
+          "status": "pending"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "skill-learn",
+          "name": "技能学习测试",
+          "test_steps": [
+            "登录系统",
+            "点击'技能管理'链接，进入技能管理页面",
+            "选择一个角色",
+            "点击'学习技能'按钮，学习一个新技能",
+            "验证技能是否学习成功"
+          ],
+          "expected_result": "角色可以正确学习技能"
+        },
+        {
+          "id": "skill-upgrade",
+          "name": "技能升级测试",
+          "test_steps": [
+            "登录系统",
+            "点击'技能管理'链接，进入技能管理页面",
+            "选择一个已学习技能的角色",
+            "点击'升级技能'按钮，升级技能",
+            "验证技能是否升级成功"
+          ],
+          "expected_result": "角色可以正确升级技能"
+        },
+        {
+          "id": "skill-level-limit",
+          "name": "技能等级限制测试",
+          "test_steps": [
+            "登录系统",
+            "点击'技能管理'链接，进入技能管理页面",
+            "选择一个角色",
+            "尝试升级技能到超过角色等级的等级",
+            "验证是否出现技能等级不能超过角色等级的提示"
+          ],
+          "expected_result": "技能等级不能超过角色等级"
+        }
+      ]
+    },
+    {
+      "id": "task-system",
+      "name": "任务系统",
+      "description": "用户可以接取和完成任务",
+      "status": "pending",
+      "priority": "medium",
+      "start_date": null,
+      "completion_date": null,
+      "subtasks": [
+        {
+          "id": "task-model",
+          "name": "任务模型创建",
+          "description": "创建任务模型和任务进度模型",
+          "status": "pending"
+        },
+        {
+          "id": "task-api",
+          "name": "后端API开发",
+          "description": "实现任务接取、完成和奖励发放API",
+          "status": "pending"
+        },
+        {
+          "id": "task-frontend",
+          "name": "前端页面开发",
+          "description": "创建任务管理页面",
+          "status": "pending"
+        },
+        {
+          "id": "task-main",
+          "name": "主线任务系统",
+          "description": "实现主线任务系统，引导玩家熟悉游戏玩法",
+          "status": "pending"
+        },
+        {
+          "id": "task-daily",
+          "name": "日常任务系统",
+          "description": "实现日常任务系统，每天可完成的任务",
+          "status": "pending"
+        },
+        {
+          "id": "task-test",
+          "name": "功能测试",
+          "description": "测试任务接取、完成和奖励发放功能",
+          "status": "pending"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "task-accept",
+          "name": "任务接取测试",
+          "test_steps": [
+            "登录系统",
+            "点击'任务'链接，进入任务页面",
+            "查看可接取的任务",
+            "点击'接取'按钮，接取任务",
+            "验证任务是否接取成功"
+          ],
+          "expected_result": "任务可以正确接取"
+        },
+        {
+          "id": "task-complete",
+          "name": "任务完成测试",
+          "test_steps": [
+            "登录系统",
+            "点击'任务'链接，进入任务页面",
+            "接取一个任务",
+            "完成任务要求",
+            "点击'提交'按钮，提交任务",
+            "验证任务是否完成，奖励是否发放"
+          ],
+          "expected_result": "任务可以正确完成，奖励可以正确发放"
+        },
+        {
+          "id": "task-daily-reset",
+          "name": "日常任务重置测试",
+          "test_steps": [
+            "登录系统",
+            "点击'任务'链接，进入任务页面",
+            "接取并完成所有日常任务",
+            "等待到第二天0点",
+            "再次进入任务页面",
+            "验证日常任务是否重置"
+          ],
+          "expected_result": "日常任务每天0点重置"
+        }
+      ]
+    },
+    {
+      "id": "social-system",
+      "name": "社交系统",
+      "description": "用户可以添加好友和聊天",
+      "status": "pending",
+      "priority": "low",
+      "start_date": null,
+      "completion_date": null,
+      "subtasks": [
+        {
+          "id": "social-model",
+          "name": "社交模型创建",
+          "description": "创建好友模型和聊天消息模型",
+          "status": "pending"
+        },
+        {
+          "id": "social-api",
+          "name": "后端API开发",
+          "description": "实现好友添加、删除和聊天消息API",
+          "status": "pending"
+        },
+        {
+          "id": "social-frontend",
+          "name": "前端页面开发",
+          "description": "创建社交页面，包括好友列表和聊天界面",
+          "status": "pending"
+        },
+        {
+          "id": "social-test",
+          "name": "功能测试",
+          "description": "测试好友添加和聊天功能",
+          "status": "pending"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "social-add-friend",
+          "name": "添加好友测试",
+          "test_steps": [
+            "登录系统",
+            "点击'社交'链接，进入社交页面",
+            "点击'添加好友'按钮",
+            "输入好友用户名，点击'搜索'按钮",
+            "点击'添加'按钮，添加好友",
+            "验证好友是否添加成功"
+          ],
+          "expected_result": "好友可以正确添加"
+        },
+        {
+          "id": "social-chat",
+          "name": "聊天功能测试",
+          "test_steps": [
+            "登录系统",
+            "点击'社交'链接，进入社交页面",
+            "选择一个好友，点击'聊天'按钮",
+            "输入聊天内容，点击'发送'按钮",
+            "验证聊天内容是否发送成功"
+          ],
+          "expected_result": "聊天功能可以正常使用"
+        }
+      ]
+    },
+    {
+      "id": "shop-system",
+      "name": "商城系统",
+      "description": "用户可以购买道具和充值",
+      "status": "pending",
+      "priority": "low",
+      "start_date": null,
+      "completion_date": null,
+      "subtasks": [
+        {
+          "id": "shop-model",
+          "name": "商城模型创建",
+          "description": "创建商品模型和订单模型",
+          "status": "pending"
+        },
+        {
+          "id": "shop-api",
+          "name": "后端API开发",
+          "description": "实现商品购买和充值API",
+          "status": "pending"
+        },
+        {
+          "id": "shop-frontend",
+          "name": "前端页面开发",
+          "description": "创建商城页面，包括商品列表和充值界面",
+          "status": "pending"
+        },
+        {
+          "id": "shop-test",
+          "name": "功能测试",
+          "description": "测试商品购买和充值功能",
+          "status": "pending"
+        }
+      ],
+      "test_cases": [
+        {
+          "id": "shop-purchase",
+          "name": "商品购买测试",
+          "test_steps": [
+            "登录系统",
+            "点击'商城'链接，进入商城页面",
+            "浏览商品列表",
+            "选择一个商品，点击'购买'按钮",
+            "验证商品是否购买成功"
+          ],
+          "expected_result": "道具可以正确购买"
+        },
+        {
+          "id": "shop-recharge",
+          "name": "充值功能测试",
+          "test_steps": [
+            "登录系统",
+            "点击'商城'链接，进入商城页面",
+            "点击'充值'按钮",
+            "选择充值金额，点击'确认'按钮",
+            "完成支付流程，验证充值是否成功"
+          ],
+          "expected_result": "充值功能可以正常使用"
+        }
+      ]
+    }
+  ]
+}
