@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api import user, character, level, equipment, ranking, skill, task
+from app.api import user, character, level, equipment, ranking, skill, task, social, shop
 
 # 创建主路由器
 router = APIRouter()
@@ -24,3 +24,9 @@ router.include_router(skill.router)
 
 # 包含任务路由
 router.include_router(task.router)
+
+# 包含社交路由
+router.include_router(social.router)
+
+# 包含商城路由
+router.include_router(shop.router)

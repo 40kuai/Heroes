@@ -12,6 +12,8 @@
           <router-link to="/skill" class="navbar-item">技能管理</router-link>
           <router-link to="/ranking" class="navbar-item">排行榜</router-link>
           <router-link to="/task" class="navbar-item">任务</router-link>
+          <router-link to="/social" class="navbar-item">社交</router-link>
+          <router-link to="/shop" class="navbar-item">商城</router-link>
           <router-link to="/battle" class="navbar-item">战斗</router-link>
           <router-link to="/login" class="navbar-item">登录</router-link>
           <router-link to="/register" class="navbar-item">注册</router-link>
